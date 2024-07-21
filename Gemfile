@@ -18,7 +18,7 @@ gem "puma", ">= 5.0"
 gem "jbuilder"
 
 # Use Redis adapter to run Action Cable in production
-# gem "redis", ">= 4.0.1"
+gem "redis", ">= 4.0.1"
 
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
@@ -65,7 +65,14 @@ gem "vite_rails"
 gem 'dotenv-rails'
 
 # Authentication
-gem "devise", "~> 4.9"
+# gem "devise", "~> 4.9"
 
 # Routes
 gem 'js-routes'
+
+# Paginate
+gem 'will_paginate'
+
+gem 'connection_pool'
+
+  

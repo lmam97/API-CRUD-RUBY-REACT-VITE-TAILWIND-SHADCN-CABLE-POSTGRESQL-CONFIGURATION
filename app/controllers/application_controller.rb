@@ -1,9 +1,17 @@
 class ApplicationController < ActionController::Base
   use_inertia_instance_props
 
-  before_action do
-    @_inertia_skip_props = @_inertia_skip_props + ['current_user']
+  inertia_share do
+    public_information
   end
 
-  
+  private
+
+  def public_information
+    {
+      'IS_PRODUCTION' => Rails.env.production?,
+      'BASE_URL' => ENV['BASE_URL'],
+      'BASE_DOMAIN' => ENV['BASE_DOMAIN']
+    }
+  end
 end
